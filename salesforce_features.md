@@ -14,15 +14,15 @@
   - The LLM issues MCP calls (eg. `salesforce_manage_field`)
   - The server translates calls into Salesforce API requests (via `jsforce`, TypeScript SDKs)
   - Results and errors are returned in rich, human‑readable form.
-  ---
+---
 
 ## MAIN FEATURES OF ***Salesforce MCP***
 
 1. **Smart Object Search**
-**Capability**:***salesforce_search_objects***
-
-**Description**:***Enables natural language-based searching of both standard and custom Salesforce objects using partial matches.***
-***for example:Find objects related to Account***
+   
+   **Capability**:salesforce_search_objects.
+   **Description**:Enables natural language-based searching of both standard and custom Salesforce objects using partial matches.
+   ***for example:Find objects related to Account***
 
 3. **Schema Inspection**
 **Capability**:***salesforce_describe_object***
