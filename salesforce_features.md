@@ -4,6 +4,7 @@
 **Salesforce** is a cloud-based **Customer Relationship Management (CRM)** platform that empowers businesses across sales, service, marketing, and more.  
 - Offers sales automation, service & support tools, marketing automation, analytics, and app development via AppExchange.  
 - Enables secure data, metadata, and API-driven access—making it ideal to integrate with AI tools like MCP.
+---
 
 ### How is Salesforce MCP Used?
 
@@ -12,16 +13,18 @@
   - Use **natural language** to describe actions (eg. “Add a Rating field to Account”)
   - The LLM issues MCP calls (eg. `salesforce_manage_field`)
   - The server translates calls into Salesforce API requests (via `jsforce`, TypeScript SDKs)
-  - Results and errors are returned in rich, human‑readable form
+  - Results and errors are returned in rich, human‑readable form.
+  ---
 
-# MAIN FEATURES OF ***Salesforce MCP***
+## MAIN FEATURES OF ***Salesforce MCP***
 
 1. **Smart Object Search**
 **Capability**:***salesforce_search_objects***
+
 **Description**:***Enables natural language-based searching of both standard and custom Salesforce objects using partial matches.***
 ***for example:Find objects related to Account***
 
-2. **Schema Inspection**
+3. **Schema Inspection**
 **Capability**:***salesforce_describe_object***
 **Description**:***Provides detailed schema info including field definitions, data types, picklist values, and relationships of any Salesforce object.***
 ***for example:Show me all fields in the Account object***
