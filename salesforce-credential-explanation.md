@@ -1,81 +1,54 @@
-#  How to Get Salesforce Consumer Key and Consumer Secret
+# How to Get Firebase Service Account Credentials
 ## Prerequisites
 
-- A Salesforce account (Developer Edition is preferred for testing)
-- Access to **Salesforce Setup**
+- A Firebase project created at [https://console.firebase.google.com](https://console.firebase.google.com)
+- Access to **Firebase Console** and **Project Settings**
 
 ---
 
-### Step 1: Login to Salesforce
+### Step 1: Login to Firebase Console
 
-1. Visit: [https://login.salesforce.com](https://login.salesforce.com)
-2. Log in using your Salesforce credentials.
-
-
-
-### Step 2: Navigate to App Manager
-
-1. Click on the **Gear Icon** at the top right corner.
-2. Select **Setup**.
-3. In the left sidebar, under **Platform Tools**, go to:
-   - `Apps` → `App Manager`.
+1. Go to: [https://console.firebase.google.com](https://console.firebase.google.com)
+2. Log in using your Google account.
+3. Select your Firebase project (e.g., `mcp-demo-b758a`).
 
 
+### Step 2: Navigate to Project Settings
 
-### Step 3: Create a New Connected App
-
-1. In App Manager, click the **"New Connected App"** button at the top-right.
-
-2. Fill in the **Basic Information**:
-   - **Connected App Name**: e.g., `My Integration App`
-   - **API Name**: Auto-filled
-   - **Contact Email**: your email address
+1. Click the **Gear Icon** next to **Project Overview** on the left sidebar.
+2. Select **Project settings** from the dropdown.
 
 
+### Step 3: Go to the Service Accounts Tab
 
-### Step 4: Enable OAuth Settings
-
-1. Scroll down to **API (Enable OAuth Settings)**.
-2. Check the box: **"Enable OAuth Settings"**
-3. Enter the **Callback URL**:
-   - Use `https://login.salesforce.com/services/oauth2/callback` (for testing),
-   - Or enter your app's actual callback/redirect URL.
-
-4. Under **Selected OAuth Scopes**, add:
-   - `Full access (full)`
-   - `Perform requests on your behalf at any time (refresh_token, offline_access)`
-   - Or any other scopes your integration requires.
+1. Inside the **Project Settings** page, click the **Service Accounts** tab.
 
 
-### Step 5: Save the Connected App
+### Step 4: Generate a New Private Key
 
-1. Click **Save**.
-2. You will see a message saying: "Allow 2–10 minutes for the changes to take effect."
-
-
-
-### Step 6: Get Consumer Key and Secret
-
-1. After saving, go back to **App Manager**.
-2. Find your new app in the list, click the dropdown at the right → **View**.
-3. You will see:
-   - **Consumer Key**: Visible on the screen.
-   - **Consumer Secret**: Click **"Click to reveal"** to see it.
+1. Under the **Firebase Admin SDK** section, click the button **"Generate new private key"**.
+2. Confirm the popup by clicking **Generate**.
+3. A `.json` file will automatically be downloaded to your system.
 
 
+### Step 5: Secure the JSON File
 
-### Step 7: Use in Your App
+1. This `.json` file contains sensitive credentials:
+   - `type`, `project_id`, `private_key_id`, `private_key`, `client_email`, and more.
+2. Store it securely and never expose it in public repositories or client-side code.
 
-You can now use the `Consumer Key` and `Consumer Secret` in your OAuth flow or API integration.
 
----
+### Step 6: Use the Credentials in Your Application
 
-### Note
+You can initialize the Firebase Admin SDK using the credentials as shown below:
 
-- Ensure the user profile using the app has API access.
-- Use [Postman](https://www.postman.com/) or your backend app to test the OAuth 2.0 token flow using these credentials.
+```python
+import firebase_admin
+from firebase_admin import credentials
 
----
+cred = credentials.Certificate("path/to/your-key.json")
+firebase_admin.initialize_app(cred)
+
 
 ### **Video Reference**  
  **[Click here to watch the full video walkthrough of salesforce credentials gatherings](https://drive.google.com/file/d/1CnpbzQyCZdjX6KXIT0CqXAkQgXXhe_Tc/view?usp=sharing)**
