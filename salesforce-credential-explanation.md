@@ -12,7 +12,7 @@
 1. Visit: [https://login.salesforce.com](https://login.salesforce.com)
 2. Log in using your Salesforce credentials.
 
----
+
 
 ## ⚙️ Step 2: Navigate to App Manager
 
@@ -21,7 +21,7 @@
 3. In the left sidebar, under **Platform Tools**, go to:
    - `Apps` → `App Manager`.
 
----
+
 
 ## ➕ Step 3: Create a New Connected App
 
@@ -163,4 +163,4 @@ You can now use the `Consumer Key` and `Consumer Secret` in your OAuth flow or A
 
 ## 🎥 **Video Reference**  
 👉 **[Click here to watch the full video walkthrough of salesforce credentials gatherings](https://drive.google.com/file/d/1CnpbzQyCZdjX6KXIT0CqXAkQgXXhe_Tc/view?usp=sharing)**
-)**
+
