@@ -11,7 +11,7 @@
 1. Visit: [https://login.salesforce.com](https://login.salesforce.com)
 2. Log in using your Salesforce credentials.
 
----
+
 
 ### Step 2: Navigate to App Manager
 
