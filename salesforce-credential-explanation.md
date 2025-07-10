@@ -51,5 +51,5 @@ firebase_admin.initialize_app(cred)
 ```
 
 ### **Video Reference**  
- **[Click here to watch the full video walkthrough of salesforce credentials gatherings](https://drive.google.com/file/d/1CnpbzQyCZdjX6KXIT0CqXAkQgXXhe_Tc/view?usp=sharing)**
+ **[Click here to watch the full video walkthrough of firebase credentials gatherings]()**
 
